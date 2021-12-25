@@ -146,6 +146,10 @@ ul {
   color: var(--brand-color);
 }
 
+.active-link {
+  color: var(--brand-color);
+}
+
 /* контакты шапки */
 
 .header-contacts {
@@ -153,14 +157,20 @@ ul {
 }
 
 .header-contact {
+  display: flex;
+  fill: var(--secondary-text-color);
   color: var(--secondary-text-color);
   text-decoration: none;
-  margin-left: 10px;
 }
 
 .header-contact:hover,
 .header-contact:focus {
   color: var(--brand-color);
+  fill: var(--brand-color);
+}
+
+.contact-icon {
+  margin-right: 10px;
 }
 
 .contact-item {
@@ -168,9 +178,26 @@ ul {
   align-items: center;
 }
 
-.contact-item:not(:last-child) {
-  margin-right: 30px;
+/* .header-contact-box {
+  display: flex;
+  fill: var(--secondary-text-color);
 }
+
+.header-contact-box:hover {
+  fill: var(--brand-color);
+} */
+
+.contact-item:not(:last-child) {
+  margin-right: 24px;
+}
+
+/* .contact-item.tel::before {
+  content: '';
+  background-image: url('../images/symbol-defs.svg#icon-smartphone');
+  width: 10px;
+  height: 16px;
+  display: inline-block;
+} */
 
 /* основная часть страницы "Студия" */
 
@@ -355,7 +382,7 @@ ul {
 
   fill: var(--main-links-icons-color);
   width: 170px;
-  height: 72px;
+  height: 92px;
   border: 1px solid var(--main-links-icons-color);
   border-radius: 4px;
 }
